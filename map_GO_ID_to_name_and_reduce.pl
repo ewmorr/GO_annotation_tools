@@ -19,8 +19,6 @@ open(GAF, "$gaf") || die "Can't open GAF file.\n";
 
 chomp(my @obo = <OBO>);
 chomp(my @gaf = <GAF>);
-#print scalar@obo, "\n";
-#print scalar@gaf, "\n";
 
 
 #process obo to terms
