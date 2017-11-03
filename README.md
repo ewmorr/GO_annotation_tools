@@ -3,7 +3,7 @@ This workflow uses blast matches for proteins from individual genomes against th
 
 ##### Workflow
 
-Parse GO gene annotation file (.gaf) by blast hits. The most efficienct workflow is to input all blast files of interest for a given dataset so that the complete GAF must only be parsed once. Blast file format is expected to be -outfmt 6. Multiple blast files entered comma-separated.
+Parse GO gene annotation file (.gaf) by blast hits. The most efficienct workflow is to input all blast files of interest for a given dataset so that the complete GAF must only be parsed once. Blast file format is expected to be `-outfmt 6`. Multiple blast files entered comma-separated.
 Parsing the GAF to retain only relevant annotations reduces run time for slim mapping with owltools.
 Read me for GAF from GO ( http://www.geneontology.org/gene-associations/readme/goa.README )
 
@@ -12,7 +12,7 @@ parse_gaf_by_blast.pl goa_uniprot_all.gaf [blast files] > goa_uniprot_all.blast_
 ```
 
 Map slim terms using owltools ( https://github.com/owlcollab/owltools )
-The option --idfile is used to map to a customized list of slim terms. The slim terms are a list of GO IDs (e.g. GO:0003674) one per line. The --idfile option can be replaced with --subset to use a predefined slim (e.g. --subset goslim_aspergillus) ( http://www.geneontology.org/page/go-slim-and-subset-guide, http://geneontology.org/page/download-ontology)
+The option `--idfile` is used to map to a customized list of slim terms. The slim terms are a list of GO IDs (e.g. GO:0003674) one per line. The `--idfile` option can be replaced with `--subset` to use a predefined slim (e.g. `--subset goslim_aspergillus`) ( http://www.geneontology.org/page/go-slim-and-subset-guide, http://geneontology.org/page/download-ontology)
 
 ```
 owltools go-basic.obo --gaf goa_uniprot_all.blast_matches.gaf --map2slim --idfile slim_terms.txt --write-gaf goa_uniprot_all.blast_matches.slim.gaf
