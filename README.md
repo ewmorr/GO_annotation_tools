@@ -1,7 +1,7 @@
 This workflow uses blast matches for proteins from individual genomes against the Uniprot-Swissprot protein database to assign GO terms. These GO terms are then mapped to a set of GO "slim" terms to map to higher level functional categories. The result is a single file in GAF format that contains gene annotations for every Uniprot accession that was hit by a protein in the original blast queries, and which can then be used to annotate individual proteins, generate copy number of genes within categories, and sum total gene copies and number of genes within a category.
 
 
-Workflow
+##### Workflow
 
 Parse GO gene annotation file (.gaf) by blast hits. The most efficienct workflow is to input all blast files of interest for a given dataset so that the complete GAF must only be parsed once. Blast file format is expected to be -outfmt 6. Multiple blast files entered comma-separated.
 Parsing the GAF to retain only relevant annotations reduces run time for slim mapping with owltools.
