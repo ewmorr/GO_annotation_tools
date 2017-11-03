@@ -25,7 +25,7 @@ This example uses the go-basic.obo and is reccomended for use with custom slim. 
 map_GO_ID_to_name_and_reduce.pl go-basic.obo goa_uniprot_all.blast_matches.slim.gaf > goa_uniprot_all.blast_matches.names_reduced.txt
 ```
 
-Map proteins from individual genomes to the slim annotation file and combine with coverage information. Uses a file of GO names produced by [map_GO_ID_to_name_and_reduce.pl](map_GO_ID_to_name_and_reduce.pl), the result of [get_maker_mRNA_coverage.pl](maker_annotation_tools/get_maker_mRNA_coverage.pl), and a file of blast results (-outfmt 6), to produce a new file with gene ID, GO names/IDs, and coverage estimated by three methods (gene coverage divided by mean/median/mode genome coverage). A file of sequence ids (one per line) can optionally be provided. If provided only these will be included in the output.
+Map proteins from individual genomes to the slim annotation file and combine with coverage information. Uses a file of GO names produced by [map_GO_ID_to_name_and_reduce.pl](map_GO_ID_to_name_and_reduce.pl), the result of [get_maker_mRNA_coverage.pl](/maker_annotation_tools/get_maker_mRNA_coverage.pl), and a file of blast results (-outfmt 6), to produce a new file with gene ID, GO names/IDs, and coverage estimated by three methods (gene coverage divided by mean/median/mode genome coverage). A file of sequence ids (one per line) can optionally be provided. If provided only these will be included in the output.
 This file can be imported to R for analyses by setting "\t" as the delimiter in read.table()
 
 ```
